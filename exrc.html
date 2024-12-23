@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Enterprise XR Consulting</title>
+    <style>
+        /* General Resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e2a47;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            z-index: 1;
+            animation: slideIn 1s ease-out;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: transform 0.3s ease;
+        }
+
+        header h1:hover {
+            transform: scale(1.05);
+        }
+
+        header p {
+            font-size: 1.3em;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* Call to Action Button */
+        .btn {
+            display: inline-block;
+            background-color: #ff3b3f;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 30px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e02b2f;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Main Sections */
+        section {
+            padding: 80px 10%;
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 25px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Services Section */
+        .services .service-item {
+            margin-bottom: 50px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .services .service-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .services .service-item h3 {
+            font-size: 1.8em;
+            color: #1e2a47;
+            margin-bottom: 20px;
+        }
+
+        .services .service-item ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .services .service-item ul li {
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .services .service-item ul li:hover {
+            color: #ff3b3f;
+        }
+
+        /* Testimonial Section */
+        .testimonial blockquote {
+            background-color: #eaeaea;
+            padding: 30px;
+            border-left: 5px solid #ff3b3f;
+            border-radius: 10px;
+            font-style: italic;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial blockquote:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial footer {
+            font-size: 1.1em;
+            text-align: right;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e2a47;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            font-size: 1em;
+            margin: 0;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background-color: #fff;
+            border-top: 4px solid #ff3b3f;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 15px;
+            width: 300px;
+            font-size: 1.1em;
+            margin-right: 15px;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            transition: border 0.3s ease;
+        }
+
+        .newsletter input[type="email"]:focus {
+            border-color: #ff3b3f;
+            outline: none;
+        }
+
+        .newsletter .btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #ff3b3f;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter .btn:hover {
+            background-color: #e02b2f;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            .btn {
+                padding: 12px 24px;
+                font-size: 1.1em;
+            }
+
+            .services .service-item {
+                margin-bottom: 40px;
+            }
+
+            .services .service-item h3 {
+                font-size: 1.6em;
+            }
+
+            .newsletter input[type="email"] {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .newsletter .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Enterprise XR Consulting</h1>
+            <p>Unlock the Power of Extended Reality for Your Enterprise</p>
+            <a href="" class="btn">Get Started Today</a>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <h2>Transformative XR Solutions for Your Enterprise</h2>
+            <p>At <strong>Enterprise XR Consulting</strong>, we specialize in helping businesses harness the transformative potential of <strong>Extended Reality (XR)</strong> to drive innovation, streamline operations, and boost performance. With a focus on <strong>scaling XR programs</strong>, we provide tailored strategies, cutting-edge technology solutions, and expert guidance to ensure the successful adoption and integration of XR into your business.</p>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Enterprise XR Consulting?</h2>
+            <ul>
+                <li><strong>Expertise in XR Strategy:</strong> Our team combines years of experience in XR technologies and deep business acumen to design solutions that align with your organization’s objectives.</li>
+                <li><strong>Tailored Solutions for Your Needs:</strong> Customized to meet your specific industry needs, from manufacturing and healthcare to retail and education.</li>
+                <li><strong>End-to-End Support:</strong> From strategic planning and implementation to continuous optimization, we provide comprehensive services for XR program success.</li>
+                <li><strong>Proven Track Record:</strong> Trusted by Fortune 500 companies to scale XR technologies for training, customer engagement, and product development.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-item">
+                <h3>XR Program Strategy & Consulting</h3>
+                <ul>
+                    <li>Market Assessment & Trends</li>
+                    <li>Roadmap Development</li>
+                    <li>Technology Integration</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <h3>Enterprise XR Development</h3>
+                <ul>
+                    <li>Custom XR Solutions</li>
+                    <li>AR/VR/MR Solutions</li>
+                    <li>Seamless Integration</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <h3>XR Training & Adoption</h3>
+                <ul>
+                    <li>Employee Training Programs</li>
+                    <li>Change Management</li>
+                    <li>Support & Maintenance</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <h3>Analytics & Optimization</h3>
+                <ul>
+                    <li>Performance Tracking</li>
+                    <li>Continuous Improvement</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <div class="container">
+            <h2>Client Success Stories</h2>
+            <blockquote>
+                <p>"Enterprise XR Consulting helped us implement a custom VR training solution for our global team, reducing onboarding time by 40%. Their team’s expertise made the transition smooth and efficient."</p>
+                <footer>- John D., Chief Learning Officer, Global Manufacturing Leader</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div
